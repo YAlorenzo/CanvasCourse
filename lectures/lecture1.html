@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CanvasCourse | Lecture1</title>
+
+     <style>
+      .canvas {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        background-color: #009bd7
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      width="400"
+      height="400"
+      id="myCanvas"
+      class="canvas"
+    ></canvas>
+
+    <script>
+      const el = document.getElementById("myCanvas");
+      const context = el.getContext("2d");
+
+      //   дом
+      context.beginPath();
+      context.moveTo(100, 300); // позиция на canvase
+      context.lineTo(300, 300); // линия
+      context.lineTo(300, 100);
+      context.lineTo(200, 50);
+      context.lineTo(100, 100);
+      context.lineTo(100, 300);
+      context.stroke(); //
+
+      context.beginPath();
+      context.arc(200, 200, 50, 0, 2 * Math.PI);
+      context.stroke();
+
+      context.beginPath();
+      context.rect(100, 300, 200, 20);
+      context.stroke();
+
+      // тело птицы
+      context.beginPath();
+      context.arc(265, 270, 18, 0, 2 * Math.PI);
+      context.fillStyle = "green";
+      context.fill();
+      context.stroke();
+
+      // крыло птицы
+      context.beginPath();
+      context.moveTo(264, 265);
+      context.lineTo(268, 275);
+      context.lineTo(295, 265);
+      context.closePath();
+      context.fillStyle = "red";
+      context.fill();
+      context.stroke();
+
+      // голова птицы
+      context.beginPath();
+      context.arc(250, 250, 15, 0, 2 * Math.PI);
+      context.fillStyle = "red";
+      context.fill();
+      context.stroke();
+
+      // глаз птицы
+      context.beginPath();
+      context.arc(245, 247, 3, 0, 2 * Math.PI);
+      context.fillStyle = "black";
+      context.fill();
+
+      // клюв птицы
+      context.beginPath();
+      context.moveTo(235, 250);
+      context.lineTo(225, 255);
+      context.lineTo(239, 260);
+      context.fillStyle = "brown";
+      context.fill();
+
+      // первая нога птицы
+      context.beginPath();
+      context.moveTo(260, 288);
+      context.lineTo(260, 300);
+      context.stroke();
+
+      // вторая нога птицы
+      context.beginPath();
+      context.moveTo(270, 288);
+      context.lineTo(270, 300);
+      context.stroke();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .canvas {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        background-color: #efb2ff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400" class="canvas"></canvas>
+
+    <script>
+      const context = myCanvas.getContext("2d");
+      const image = new Image();
+      image.src = "./img/img.png";
+
+      const maxY = 50;
+      const rangeY = 50;
+      let p = 0;
+
+
+      animate();
+
+      function animate() {
+
+        p=p+0.001;
+        if(p>1){
+            p=0;
+        }
+        const y = maxY - Math.abs(Math.sin(p*Math.PI))*rangeY;
+
+
+        context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+
+        context.drawImage(image, 100, y, 200, 200);
+
+        context.font = "30px Arial";
+        context.textBaseline = "middle";
+        context.textAlign = "center";
+        context.fillStyle = "#b2ffff";
+
+        context.fillText("Canvas Image", 200, 300);
+        requestAnimationFrame(animate);
+      }
+    </script>
+  </body>
+</html>
