@@ -11,21 +11,52 @@
         display: flex;
         background-color: #009bd7;
       }
+
+      .button {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #009bd7;
+        border: 2px solid #009bd7;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 8px;
+        margin-top: 30px;
+        padding: 10px 30px;
+        transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .button:hover {
+        background-color: white;
+      }
     </style>
   </head>
   <body>
     <canvas id="myCanvas" width="400" height="400"> </canvas>
 
+    <button class="button">Play Song</button>
+
     <script src="snowman.js"></script>
     <script>
       const context = myCanvas.getContext("2d");
+      const buttonPlay = document.querySelector('.button');
       const minX = 170;
       const rangeX = 60;
       let p = 0;
 
-      const bow= new Image();
+      const bow = new Image();
       bow.src = "./img/bow.png";
 
+      const song = new Audio("./sounds/jingleBells.mp3");
+
+      document.addEventListener("keydown", function (info) {
+        if (info.code === "Space") {
+          song.play();
+        }
+        buttonPlay.addEventListener("click", () => {
+          song.play();
+        });
+      });
 
       myCanvas.addEventListener("mousemove", function (info) {
         p = info.offsetX / myCanvas.width;
@@ -45,11 +76,11 @@
 
         context.drawImage(bow, 150, 225, 100, 60);
 
-        context.font="40px Comic Sans MS";
-        context.textAlign='center';
-        context.textBaseline='middle';
+        context.font = "40px Comic Sans MS";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
         context.fillText("Merry", 200, 310);
-
+        context.fillText("Cristmas", 200, 360);
         requestAnimationFrame(animate);
       }
     </script>
