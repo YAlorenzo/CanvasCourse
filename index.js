@@ -49,6 +49,24 @@ const exersiceList = [
     description: "mouse movement effect",
     path: "./lectures/lecture8.html",
   },
+  {
+    id: "9",
+    tittle: "Illusion",
+    description: "Creating Mind-Bending Optical Illusions with JavaScript",
+    path: "./lectures/lecture9.html",
+  },
+  {
+    id: "10",
+    tittle: "YinYang",
+    description: "Drawing the YinYang with JavaScript",
+    path: "./lectures/lecture10.html",
+  },
+  {
+    id: "11",
+    tittle: "Ebbinghaus",
+    description: "The Ebbinghaus Illusion with JavaScript",
+    path: "./lectures/lecture11.html",
+  },
 ];
 
 function renderGridItem() {

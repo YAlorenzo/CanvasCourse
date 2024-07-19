@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myCanvas {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="600" height="600"> </canvas>
+
+    <script>
+      const context = myCanvas.getContext("2d");
+
+      drawYinYang(myCanvas.width / 2, myCanvas.height / 2, 100)
+
+      function drawYinYang(centerX, centerY, radius) {
+        const left = centerX - radius;
+        const top_ = centerY - radius;
+        context.save();
+        
+
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        context.clip();
+        context.fillStyle = "white";
+        context.fillRect(left, top_, radius, radius * 2);
+        context.fillStyle = "black";
+        context.fillRect(centerX, top_, radius, radius * 2);
+
+        context.beginPath();
+        context.arc(centerX, centerY - radius / 2, radius / 2, 0, Math.PI * 2);
+        context.fillStyle = "white";
+        context.fill();
+
+        context.beginPath();
+        context.arc(centerX, centerY - radius / 2, radius / 6, 0, Math.PI * 2);
+        context.fillStyle = "black";
+
+        context.fill();
+
+        context.beginPath();
+        context.arc(centerX, centerY + radius / 2, radius / 2, 0, Math.PI * 2);
+        context.fillStyle = "black";
+        context.fill();
+
+        context.beginPath();
+        context.arc(centerX, centerY + radius / 2, radius / 6, 0, Math.PI * 2);
+        context.fillStyle = "white";
+
+        context.fill();
+
+        context.restore();
+        
+      }
+    </script>
+  </body>
+</html>
