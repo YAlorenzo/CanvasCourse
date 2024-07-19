@@ -67,6 +67,18 @@ const exersiceList = [
     description: "The Ebbinghaus Illusion with JavaScript",
     path: "./lectures/lecture11.html",
   },
+  {
+    id: "12",
+    tittle: "Drawing",
+    description: "Drawing in circles with JavaScript",
+    path: "./lectures/lecture12.html",
+  },
+  {
+    id: "13",
+    tittle: "Spinning Canvas",
+    description: "Coding a Spinning Canvas App with JavaScript",
+    path: "./lectures/lecture13.html",
+  },
 ];
 
 function renderGridItem() {
