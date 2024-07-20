@@ -20,6 +20,8 @@ function animate() {
   context.clearRect(0, 0, myCanvas.width, myCanvas.height);
   context.beginPath();
   context.arc(x, y, rad, 0, Math.PI * 2);
+  context.strokeStyle = "#da0000";
+
   context.stroke();
 
   requestAnimationFrame(animate);

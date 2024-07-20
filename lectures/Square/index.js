@@ -1,20 +1,20 @@
 const el = document.getElementById("myCanvas");
 const context = el.getContext("2d");
-const thickness = 10;
+const thickness = 5;
 let x = 0,
   y = 0,
-  w = 200,
+  w = 400,
   h = 400;
 
 let i = 1;
 
-while (i <= 10) {
+while (i <= 40) {
   context.beginPath();
   context.rect(x, y, w, h);
   if (i % 2 == 1) {
-    context.fillStyle = "blue";
+    context.fillStyle = "#da0000";
   } else {
-    context.fillStyle = "white";
+    context.fillStyle = "#2e2e2d";
   }
   context.fill();
   x = x + thickness;

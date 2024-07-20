@@ -1,5 +1,6 @@
 body {
   background-color: #2e2e2d;
+  padding-top: 15px;
 }
 .piano {
   padding: 50px 0;
@@ -47,8 +48,24 @@ body {
   background-color: #071ff5;
 }
 #s7 {
+  background-color: #6305dd;
+}
+#s8 {
   background-color: #f507e9;
 }
-.note:hover {
-  opacity: 0.6;
+.home-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+
+  background-color: #da0000;
+}
+.home-button:hover {
+  background-color: #f13c20;
 }

@@ -38,7 +38,9 @@ function animate() {
     const xyWithRotation = toXY(pol);
     xyWithRotation.x += myCanvas.width / 2;
     xyWithRotation.y += myCanvas.height / 2;
-    context.lineTo(xyWithRotation.x, xyWithRotation.y);
+      context.lineTo(xyWithRotation.x, xyWithRotation.y);
+      context.strokeStyle = "#da0000";
+      
     context.stroke();
     context.beginPath();
     context.moveTo(xyWithRotation.x, xyWithRotation.y);
@@ -60,5 +62,4 @@ function toXY({ mag, dir }) {
 }
 function updateRotationSpeed() {
   rotationSpeed = parseFloat(document.getElementById("speedSlider").value);
-  console.log(rotationSpeed);
 }

@@ -3,19 +3,23 @@ const buttonPlay = document.querySelector(".button");
 const minX = 170;
 const rangeX = 60;
 let p = 0;
+let isPlay = false;
 
 const bow = new Image();
 bow.src = "./img/bow.png";
 
 const song = new Audio("./sounds/jingleBells.mp3");
 
-document.addEventListener("keydown", function (info) {
-  if (info.code === "Space") {
+buttonPlay.addEventListener("click", () => {
+  if (!isPlay) {
     song.play();
+    isPlay = true;
+    buttonPlay.textContent = "Stop Song";
+  } else {
+    song.pause();
+    isPlay = false;
+    buttonPlay.textContent = "Play Song";
   }
-  buttonPlay.addEventListener("click", () => {
-    song.play();
-  });
 });
 
 myCanvas.addEventListener("mousemove", function (info) {

@@ -22,7 +22,7 @@ function animate() {
   context.font = "30px Arial";
   context.textBaseline = "middle";
   context.textAlign = "center";
-  context.fillStyle = "#b2ffff";
+  context.fillStyle = "#f13c20";
 
   context.fillText("Canvas Image", 200, 300);
   requestAnimationFrame(animate);

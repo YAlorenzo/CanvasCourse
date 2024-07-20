@@ -1,26 +1,46 @@
 body {
   background-color: #2e2e2d;
+  padding-top: 15px;
 }
-.canvas {
+#myCanvas {
   margin-left: auto;
   margin-right: auto;
   display: flex;
   background-color: #009bd7;
 }
 #button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  background-color: #009bd7;
-  border: 2px solid #009bd7;
-  font-size: 20px;
+  background-color: #da0000;
+  border: none;
   cursor: pointer;
-  font-weight: 700;
   border-radius: 8px;
   margin-top: 30px;
   padding: 10px 30px;
   transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #button:hover {
-  background-color: white;
+  background-color: #f13c20;
+}
+
+.home-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+
+  background-color: #da0000;
+}
+.home-button:hover {
+  background-color: #f13c20;
 }

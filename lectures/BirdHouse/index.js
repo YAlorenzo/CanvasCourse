@@ -11,6 +11,9 @@ context.lineTo(100, 100);
 context.lineTo(100, 300);
 context.strokeStyle = "#DA0000";
 
+
+
+
 context.stroke(); //
 
 context.beginPath();
@@ -56,7 +59,7 @@ context.beginPath();
 context.moveTo(235, 250);
 context.lineTo(225, 255);
 context.lineTo(239, 260);
-context.fillStyle = "brown";
+context.fillStyle = "yellow";
 context.fill();
 
 // первая нога птицы

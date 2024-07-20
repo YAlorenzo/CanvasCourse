@@ -1,9 +1,25 @@
 body {
   background-color: #2e2e2d;
+  padding-top: 15px;
 }
 #myCanvas {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  background-color: deepskyblue;
+}
+.home-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+
+  background-color: #da0000;
+}
+.home-button:hover {
+  background-color: #f13c20;
 }
