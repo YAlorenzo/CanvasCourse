@@ -206,6 +206,7 @@ a {
     transform: rotate(0deg);
   }
 }
-
-
+.link {
+  z-index: 1;
+}
      

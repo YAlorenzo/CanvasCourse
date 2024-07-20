@@ -1,0 +1,14 @@
+body {
+  background-color: #2e2e2d;
+}
+.canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.home-button{
+ background-color: #DA0000;
+}
+.home-button:hover{
+ background-color: #F13C20;
+}

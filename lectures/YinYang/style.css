@@ -1,0 +1,9 @@
+body {
+  background-color: #2e2e2d;
+}
+#myCanvas {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: deepskyblue;
+}

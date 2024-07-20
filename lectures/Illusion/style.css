@@ -1,0 +1,10 @@
+body {
+  background-color: #2e2e2d;
+}
+#myCanvas {
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
