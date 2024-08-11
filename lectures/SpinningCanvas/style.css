@@ -26,23 +26,15 @@ body {
   border: 1px solid #da0000;
 }
 input[type="range"] {
-  width: 100%; 
-  height: 8px; /* Высота трека */
-  background: #ddd; /* Цвет трека */
-  border-radius: 5px; /* Скругление углов трека */
-  outline: none; /* Убирает контур при фокусировке */
+  width: 100%;
+  height: 8px; 
+  background: #ddd; 
+  border-radius: 5px; 
+  outline: none; 
   padding: 0;
   margin: 0;
 }
 
-input[type="range"]::-moz-range-thumb {
-  width: 20px; /* Ширина ползунка */
-  height: 20px; /* Высота ползунка */
-  background: #4CAF50; /* Цвет ползунка */
-  border: 2px solid #333; /* Цвет и ширина границы ползунка */
-  border-radius: 50%; /* Скругление углов ползунка */
-  cursor: pointer; /* Вид курсора при наведении */
-}
 .home-button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;

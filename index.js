@@ -79,6 +79,12 @@ const exersiceList = [
     description: "Coding a Spinning Canvas App with JavaScript",
     path: "./lectures/SpinningCanvas/index.html",
   },
+  {
+    id: "14",
+    tittle: "Impossible Trian",
+    description: "The Penrose triangle, is a triangular impossible object",
+    path: "./lectures/InpossibleTriangle/index.html",
+  },
 ];
 
 function renderGridItem() {
